@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cjrvdev.deeplinktestsuite.MainActivity">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:text="Preview: "/>
+            <TextView
+                android:id="@+id/tvPreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!-- Scheme -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"
+                    android:text="Scheme: "/>
+                <EditText
+                    android:id="@+id/etScheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!-- Scheme -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"
+                    android:text="Host: "/>
+                <EditText
+                    android:id="@+id/etHost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!-- Scheme -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_text"
+                    android:text="Data: "/>
+                <EditText
+                    android:id="@+id/etData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- Intent flags -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/primary_text"
+                android:text="Activity Flags: "/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <CheckBox
+                    android:id="@+id/cbNewTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FLAG_ACTIVITY_NEW_TASK"/>
+                <CheckBox
+                    android:id="@+id/cbSingleTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FLAG_ACTIVITY_SINGLE_TOP"/>
+                <CheckBox
+                    android:id="@+id/cbClearTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FLAG_ACTIVITY_CLEAR_TOP"/>
+            </LinearLayout>
+
+            <!-- Run -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:background="@color/colorAccent"
+                android:text="Start Intent"
+                android:onClick="btStartIntent"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
